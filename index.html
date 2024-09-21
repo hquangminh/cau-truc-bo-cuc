@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      /* table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        background-color: #eb0015;
+        color: white;
+        padding: 12px;
+        text-align: left;
+      }
+
+      td {
+        padding: 12px;
+        border: 1px solid #dddddd;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      /* khung bai viet */
+      .layout-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .image-section,
+      .text-section {
+        flex: 1;
+      }
+
+      .youtube_image {
+        width: 100%;
+        height: 400px;
+      }
+
+      .image-section img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /* Text section styling */
+      .text-section {
+        padding: 20px;
+      }
+
+      .text-section h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .text-section p {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Photo base styling */
+      .photo_base {
+        text-align: center;
+        object-fit: cover;
+      }
+
+      /* Custom title styling */
+      .title-custom-bugs-css {
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto 50px;
+        text-align: center;
+        font-size: 30px;
+        color: #ff0000;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+      /* Card container */
+      .card-container-post {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      /* Card post styling */
+      .card-post {
+        padding: 10px;
+        flex: 1 1 calc(33.333% - 20px);
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-post:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-post img {
+        width: 100%;
+        height: 200px !important;
+        margin-bottom: 10px;
+        object-fit: cover;
+      }
+
+      .card-post h3 {
+        margin: 10px 0;
+        font-size: 1.5rem;
+      }
+
+      .card-post span {
+        color: black;
+        font-size: 15px;
+      }
+      .dot_dau_diesel {
+        transform: scale(1);
+      }
+
+      .layout-wrapper-image {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .layout-wrapper-image trust {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .layout-wrapper-image trust img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .ck_desc_img {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Responsive Design */
+      @media only screen and (max-width: 600px) {
+        table {
+          width: 100%;
+        }
+
+        thead {
+          display: none;
+        }
+
+        tbody,
+        tr {
+          display: block;
+          width: 100%;
+        }
+
+        tr {
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #ddd;
+        }
+
+        td {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: left;
+          padding: 10px;
+          border-bottom: 1px dashed #ccc;
+          word-wrap: break-word;
+        }
+
+        td::before {
+          content: attr(data-label);
+          flex-basis: 30%;
+          text-align: left;
+          font-weight: bold;
+          padding-right: 10px;
+        }
+        .layout-wrapper {
+          flex-direction: column;
+        }
+
+        .image-section,
+        .text-section {
+          width: 100%;
+        }
+
+        .text-section {
+          padding: 15px;
+        }
+
+        .text-section h1 {
+          font-size: 1.5rem;
+        }
+
+        .card-container-post {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .card-post {
+          flex: 1;
+        }
+
+        .title-custom-bugs-css {
+          width: auto;
+        }
+        .layout-wrapper-image {
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .layout-wrapper-image img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout-wrapper">
+      <div class="image-section">
+        <trust
+          ><img
+            alt="lò hơi tầng sôi và nồi hơi tầng sôi"
+            class="photo_base"
+            src="https://divigroup.com.vn/vnt_upload/news/09_2024/lo_hoi_tang_soi.jpg"
+            style="width: 580px; height: 580px"
+          /><span class="ck_desc_img">lò hơi tầng sôi và nồi hơi tầng sôi Divi Group</span></trust
+        >
+      </div>
+
+      <div class="text-section">
+        <p>
+          Trước tiên, chúng ta hãy nói một chút về <strong>lò hơi tầng sôi</strong> và <strong>nồi hơi tầng sôi</strong>. Đây là những hệ thống lò hơi
+          sử dụng công nghệ tầng sôi (fluidized bed) để tăng cường hiệu quả đốt cháy nhiên liệu. Nghe thì có vẻ phức tạp, nhưng thực tế, cơ chế hoạt
+          động rất đơn giản: nhiên liệu và không khí được kết hợp và đốt cháy một cách liên tục, giúp nhiên liệu cháy triệt để, tạo ra nhiệt lượng lớn
+          hơn trong khi giảm thiểu lượng khí thải độc hại ra môi trường. Hiểu thêm về nồi hơi hay còn gọi là lò hơi bạn đọc bài viết "<strong
+            ><a href="https://divigroup.com.vn/vn/noi-hoi-lo-hoi-la-gi.html" target="_blank"
+              ><span style="color: #ff8c00">Nồi hơi là gì ? lò hơi là gì ?</span></a
+            ></strong
+          >
+          "
+        </p>
+
+        <p>
+          Một điểm nổi bật của <strong>lò hơi tầng sôi</strong> và <strong>nồi hơi tầng sôi</strong> là khả năng sử dụng nhiều loại nhiên liệu khác
+          nhau, từ sinh khối, than đá cho đến chất thải công nghiệp. Điều này không chỉ giúp doanh nghiệp tối ưu hóa chi phí nhiên liệu mà còn góp
+          phần giảm thiểu rác thải, bảo vệ môi trường.
+        </p>
+      </div>
+    </div>
+    <!-- table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Ưu điểm</th>
+          <th>Nhược điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Ưu điểm">Chi phí ban đầu thấp</td>
+          <td data-label="Nhược điểm">Hiệu suất đốt cháy không cao bằng lò hơi tầng sôi tuần hoàn.</td>
+        </tr>
+        <tr>
+          <td data-label="Ưu điểm">Cấu trúc đơn giản, dễ bảo trì</td>
+          <td data-label="Nhược điểm">Chỉ phù hợp với quy mô nhỏ hoặc vừa, không hiệu quả với công suất lớn.</td>
+        </tr>
+        <tr>
+          <td data-label="Ưu điểm">Phù hợp với nhiều loại nhiên liệu, từ sinh khối đến than đá</td>
+          <td data-label="Nhược điểm">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- cấu trúc bài viết sản phẩm video -->
+    <h2 class="title-custom-bugs-css">Bài viết liên quan:</h2>
+
+    <div class="card-container-post">
+      <div class="card-post">
+        <a href="https://divigroup.com.vn/vn/lo-hoi-dot-cui.html" target="_blank"
+          ><img
+            alt="lò hơi đốt củi và nồi hơi đốt củi"
+            src="https://divigroup.com.vn/vnt_upload/news/z2719169046059_3b49598cf29829a1a1f600bcc8719ab8.jpg"
+          />
+        </a>
+
+        <h3><a href="https://divigroup.com.vn/vn/lo-hoi-dot-cui.html" target="_blank">Lò hơi đốt củi và Nồi hơi đốt củi </a></h3>
+      </div>
+
+      <div class="card-post">
+        <a href="https://divigroup.com.vn/vn/phan-loai-lo-hoi-cong-nghiep.html" target="_blank"
+          ><img
+            alt="phân loại nồi hơi công nghiệp ( lò hơi công nghiệp )"
+            src="https://divigroup.com.vn/vnt_upload/news/09_2024/Lo_hoi_cong_nghiep___phan_loai_lo_hoi_cong_nghiep.jpg"
+          />
+        </a>
+
+        <h3>
+          <a href="https://divigroup.com.vn/vn/giam-tieu-hao-nhien-lieu-noi-hoi.html" target="_blank"
+            >Lò hơi công nghiệp ( Nồi hơi công nghiệp ) là gì? Phân Loại nồi hơi phổ biến nhất 2024
+          </a>
+        </h3>
+      </div>
+
+      <div class="card-post">
+        <a href="https://divigroup.com.vn/vn/tong-quan-ve-lo-hoi.html" target="_blank"
+          ><img alt="Cấu tạo lò hơi ( nồi hơi ) công nghiệp" src="https://divigroup.com.vn/vnt_upload/news/09_2024/lo_hoi_cong_nghiep_la_gi_.jpg" />
+        </a>
+
+        <h3>
+          <a href="https://divigroup.com.vn/vn/tong-quan-ve-lo-hoi.html" target="_blank"
+            >Lò hơi (nồi hơi) Divi Group: cấu tạo và nguyên lý hoạt động
+          </a>
+        </h3>
+      </div>
+    </div>
+
+    <h2 class="title-custom-bugs-css">Video tham khảo thêm:</h2>
+
+    <div class="card-container-post">
+      <div class="card-post">
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen=""
+          class="youtube_image"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          src="https://www.youtube.com/embed/XelxLh9KFwE?si=rHwzWXXI8DDwDDf0"
+          title="lò hơi tầng sôi đốt biomas"
+        ></iframe>
+
+        <h3>[DIVI] Mô phỏng ngắn về nồi hơi - lò hơi tầng sôi đốt biomass</h3>
+      </div>
+      <!-- Video 2 -->
+
+      <div class="card-post">
+        <iframe
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen=""
+          class="youtube_image"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          src="https://www.youtube.com/embed/AnEJFK3-8RU?si=vuu5oogT38-58mOk"
+          title="Nồi hơi là gì? Lò hơi là gì ? Phân loại nồi hơi ( lò hơi ) trong công nghiệp!"
+        ></iframe>
+
+        <h3>[DIVI] Nồi hơi là gì? Phân loại nồi hơi trong công nghiệp!</h3>
+      </div>
+    </div>
+
+    <h2 class="title-custom-bugs-css">Các sản phẩm nồi hơi của Tập đoàn DIVI:</h2>
+
+    <div class="card-container-post">
+      <!-- Sản phẩm 1 -->
+      <div class="card-post">
+        <a href="https://divigroup.com.vn/vn/noi-hoi-tang-soi-dot-sinh-khoi.html" target="_blank"
+          ><img alt="Nồi hơi tầng sôi đốt sinh khối" class="noi_hoi_zoom" src="https://divigroup.com.vn/vnt_upload/product/04_2024/3.png" />
+        </a>
+
+        <h3><a href="https://divigroup.com.vn/vn/noi-hoi-tang-soi-dot-sinh-khoi.html" target="_blank">Nồi hơi tầng sôi đốt sinh khối</a></h3>
+        <a href="https://divigroup.com.vn/vn/noi-hoi-tang-soi-dot-sinh-khoi.html" target="_blank"> </a>
+      </div>
+      <!-- Sản phẩm 2 -->
+
+      <div class="card-post">
+        <a href="https://divigroup.com.vn/vn/noi-hoi-dot-nhien-lieu-long" target="_blank"
+          ><img alt="Nồi hơi đốt dầu Diesel" src="https://divigroup.com.vn/vnt_upload/news/09_2024/lo_hoi_dot_dau_diesel_1.jpg" />
+        </a>
+
+        <h3><a href="https://divigroup.com.vn/vn/noi-hoi-dot-nhien-lieu-long" target="_blank">Nồi hơi đốt dầu Diesel</a></h3>
+        <a href="https://divigroup.com.vn/vn/noi-hoi-dot-nhien-lieu-long" target="_blank"> </a>
+      </div>
+      <!-- Sản phẩm 3 -->
+
+      <div class="card-post">
+        <a href="https://divigroup.com.vn/vn/noi-dau-tai-nhiet-dot-sinh-khoi.html" target="_blank"
+          ><img
+            alt="Nồi dầu tải nhiệt tầng sôi đốt biomass"
+            class="noi_hoi_zoom"
+            src="https://divigroup.com.vn/vnt_upload/news/08_2024/noi_hoi_dot_dau_diesel.jpg"
+          />
+        </a>
+
+        <h3><a href="https://divigroup.com.vn/vn/noi-dau-tai-nhiet-dot-sinh-khoi.html" target="_blank">Nồi dầu tải nhiệt tầng sôi đốt biomass</a></h3>
+        <a href="https://divigroup.com.vn/vn/noi-dau-tai-nhiet-dot-sinh-khoi.html" target="_blank"> </a>
+      </div>
+    </div>
+
+    <!-- cấu trúc 2 ảnh  -->
+
+    <div class="layout-wrapper-image">
+      <trust>
+        <img
+          alt="buồng đốt lò hơi công nghiệp ghi tĩnh"
+          class="photo_base"
+          src="https://divigroup.com.vn/vnt_upload/news/09_2024/buong_dot_lo_hoi_ghi_xich.jpg"
+        />
+        <span class="ck_desc_img">buồng đốt lò hơi công nghiệp nghi tĩnh</span>
+      </trust>
+      <trust>
+        <img
+          alt="mặt ghi tĩnh của lò hơi công nghiệp"
+          class="photo_base"
+          src="https://divigroup.com.vn/vnt_upload/news/09_2024/mat_ghi_xich_lo_hoi_cong_nghiep.jpg"
+        />
+        <span class="ck_desc_img">mặt ghi tĩnh của lò hơi công nghiệp</span>
+      </trust>
+    </div>
+  </body>
+</html>
